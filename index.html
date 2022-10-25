@@ -1,4 +1,43 @@
 <!DOCTYPE html>
 <html>
-	
+	<head>
+		<title>Ordering App</title>
+		<link rel="stylesheet" href="index.css">
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		<main>
+			<div class="banner">
+				<h1>Jimmy's Diner</h1>
+				<p>The best burgers and pizzas in town.</p>
+			</div>
+			<div id="menu" class="menu"></div>
+			<div class="basket">
+				<p>Your order</p>
+				<div class="basket-item-container">
+					<div class="basket-item">
+						<p class="basket-food">Pizza</p>
+						<button class="remove-btn">remove</button>
+						<p class="basket-price">$14</p>
+					</div>
+					<div class="basket-item">
+						<p class="basket-food">Pizza</p>
+						<button class="remove-btn">remove</button>
+						<p class="basket-price">$14</p>
+					</div>
+				</div>
+				<div class="price">
+					<p class="total-price">Total price:</p>
+					<p class="basket-price">$26</p>
+				</div>
+				<button class="order-btn">Complete order</button>
+			</div>
+			<script src="index.js" type="module"></script>
+		</main>
+	</body>
 </html>

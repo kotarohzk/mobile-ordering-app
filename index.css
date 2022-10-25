@@ -3,4 +3,137 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Smythe', cursive;
+	font-size: 1rem;
+}
+
+main {
+	width: 450px;
+	margin: 0 auto;
+}
+
+.banner {
+	padding: 1.5em 2em;
+	background-image: url(img/backrgound.png);
+	background-size: cover;
+}
+
+.banner h1,
+.banner p {
+	margin: 0;
+	color: white;
+}
+
+.banner p {
+	margin-top: .5em;
+	letter-spacing: 1px;
+}
+
+i {
+	font-size: 15px;
+	border: 2px solid #8B8B8B;
+	border-radius: 50%;
+	padding: .5em;
+	margin-left: auto;
+	cursor: pointer;
+}
+
+.food-emoji {
+	font-size: 5rem;
+	margin-right: .3em;
+}
+
+.food-title,
+.food-price {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.food-ingredient {
+	color: #8B8B8B;
+	margin: 0;
+	margin-bottom: 3px;
+}
+
+/* .menu {
+	margin-bottom: 2em;
+} */
+
+.menu-item {
+	display: flex;
+	align-items: center;
+	width: 90%;
+	height: 200px;
+	margin: 0 auto;
+	border-bottom: 1px solid #D2D2D2;
+}
+
+.food-price {
+	font-size: 1.1rem;
+}
+
+/* basket section */
+
+.basket {
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 2em;
+	position: sticky;
+	bottom: 0;
+	background-color: #FFF;
+	border-top: 1px solid #D2D2D2;
+	display: none;
+}
+
+.basket p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.basket-item-container {
+	border-bottom: 1px solid black;
+	margin-bottom: .6em;
+	padding-bottom: .5em;
+}
+
+.basket > p {
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 1em;
+}
+
+.basket-item,
+.price {
+	display: flex;
+	text-align: center;
+	background-color: white;
+	margin-bottom: .5em;
+}
+
+.basket-price {
+	margin-left: auto;
+}
+
+.remove-btn {
+	font-size: .6rem;
+	background-color: #FFF;
+	border: none;
+}
+
+.basket-food,
+.basket-price,
+.total-price {
+	font-size: 1.5rem;
+}
+
+.order-btn {
+	width: 100%;
+	padding: .8em 1em;
+	font-size: 1rem;
+	margin: 2em auto;
+	background-color: #16DB99;
+	border: none;
+	border-radius: 5px;
+	color: #FFF;
+	cursor: pointer;
 }
