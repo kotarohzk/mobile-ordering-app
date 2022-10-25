@@ -31,6 +31,7 @@ document.addEventListener('click', (evt) => {
 	}
 	else if (!evt.target.closest(".form-section")) {
 		document.getElementById('overlay').style.display = "none"
+		document.getElementById('body').classList.remove('overflow-disable')
 	}
 	else if (evt.target.id === 'pay-btn') {
 		handlePayBtn(evt)
