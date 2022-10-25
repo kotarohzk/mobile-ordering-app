@@ -34,8 +34,15 @@ i {
 	border: 2px solid #8B8B8B;
 	border-radius: 50%;
 	padding: .5em;
-	margin-left: auto;
 	cursor: pointer;
+}
+
+.icon-group {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 25%;
 }
 
 .food-emoji {
@@ -53,11 +60,9 @@ i {
 	color: #8B8B8B;
 	margin: 0;
 	margin-bottom: 3px;
+	width: 150px;
+	overflow-wrap: break-word;
 }
-
-/* .menu {
-	margin-bottom: 2em;
-} */
 
 .menu-item {
 	display: flex;

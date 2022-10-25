@@ -1,4 +1,4 @@
-import { handleAddToBasketClick, handleRemoveClick } from "./handleClick.js"
+import { handleAddToBasketClick, handleRemoveClick, handleDecreaseClick } from "./handleClick.js"
 import { getBasketHtml, getMenuHtml, getPriceHtml } from "./getHtml.js"
 
 function renderMenu() {
@@ -18,12 +18,14 @@ function renderBasket() {
 document.addEventListener('click', (evt) => {
 	if (evt.target.dataset.foodid) {
 		handleAddToBasketClick(evt)
-		renderBasket()
 	}
 	else if (evt.target.dataset.remove) {
 		handleRemoveClick(evt)
-		renderBasket()
 	}
+	else if (evt.target.dataset.decrease) {
+		handleDecreaseClick(evt)
+	}
+	renderBasket()
 })
 
 renderMenu()

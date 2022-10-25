@@ -8,9 +8,13 @@ function getMenuHtml() {
 			<div class="food-desc">
 				<p class="food-title">${menuItem.name}</p>
 				<p class="food-ingredient">${menuItem.ingredients}</p>
-				<p class="food-price">${menuItem.price}</p>
+				<p class="food-price">$${menuItem.price}</p>
 			</div>
-			<i class="fa-solid fa-plus" data-foodid="${menuItem.id}"></i>
+			<div class="icon-group">
+				<i class="fa-solid fa-minus" data-decrease="${menuItem.id}"></i>
+				<p id="quantity-${menuItem.id}">0</p>
+				<i class="fa-solid fa-plus" data-foodid="${menuItem.id}"></i>
+			</div>
 		</div>
 		`
 	}).join("")
