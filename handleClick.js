@@ -1,4 +1,4 @@
-export function handleAddToBasketClick(evt) {
+function handleAddToBasketClick(evt) {
 	if (!localStorage.hasOwnProperty('order')) {
 		localStorage.setItem('order', JSON.stringify([]))
 	}
@@ -16,3 +16,13 @@ export function handleAddToBasketClick(evt) {
 	}
 	localStorage.setItem('order', JSON.stringify(orderObjArray))
 }
+
+function handleRemoveClick(evt) {
+	const oldBasket = JSON.parse(localStorage.getItem('order'))
+	const updatedBasket = oldBasket.filter((basketItem) => {
+		return basketItem.id != evt.target.dataset.remove
+	})
+	localStorage.setItem('order', JSON.stringify(updatedBasket))
+}
+
+export { handleAddToBasketClick, handleRemoveClick }

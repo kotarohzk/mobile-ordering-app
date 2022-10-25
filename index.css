@@ -85,10 +85,6 @@ i {
 	display: none;
 }
 
-.shown {
-	display: block;
-}
-
 .basket p {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -121,7 +117,11 @@ i {
 .remove-btn {
 	font-size: .6rem;
 	background-color: #FFF;
+	margin-left: 1em;
 	border: none;
+	padding: 0;
+	color: #c6c3c3;
+	cursor: pointer;
 }
 
 .basket-food,

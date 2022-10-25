@@ -24,10 +24,22 @@ function getBasketHtml() {
 		<div class="basket-item">
 			<p class="basket-food">${menuObj.name}</p>
 			<button class="remove-btn" data-remove="${menuObj.id}">remove</button>
-			<p class="basket-price">${menuObj.price * orderObj.number}</p>
+			<p class="basket-price">$${menuObj.price * orderObj.number}</p>
 		</div>
 		`
 	}).join("")
 }
 
-export { getBasketHtml, getMenuHtml }
+function getPriceHtml() {
+	const orderArray = JSON.parse(localStorage.getItem('order'))
+	const totalPrice = orderArray.reduce((previousValue, currentValue) => {
+		const menuPrice = menuArray.filter((menuItem) => menuItem.id == currentValue.id)[0].price
+		return previousValue + (currentValue.number * menuPrice)
+	}, 0)
+	return `
+	<p class="total-price">Total price:</p>
+	<p class="basket-price">$${totalPrice}</p>
+	`
+}
+
+export { getBasketHtml, getMenuHtml, getPriceHtml }
