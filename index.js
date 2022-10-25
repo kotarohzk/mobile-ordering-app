@@ -1,4 +1,4 @@
-import { handleAddToBasketClick, handleRemoveClick, handleDecreaseClick } from "./handleClick.js"
+import { handleAddToBasketClick, handleRemoveClick, handleDecreaseClick, updateOrderQuantity, handleOrderBtn, handlePayBtn } from "./handleClick.js"
 import { getBasketHtml, getMenuHtml, getPriceHtml } from "./getHtml.js"
 
 function renderMenu() {
@@ -16,6 +16,7 @@ function renderBasket() {
 }
 
 document.addEventListener('click', (evt) => {
+	document.getElementById('confirmation-message').style.display = "none"
 	if (evt.target.dataset.foodid) {
 		handleAddToBasketClick(evt)
 	}
@@ -25,10 +26,23 @@ document.addEventListener('click', (evt) => {
 	else if (evt.target.dataset.decrease) {
 		handleDecreaseClick(evt)
 	}
-	renderBasket()
+	else if (evt.target.id === 'order-btn') {
+		handleOrderBtn()
+	}
+	else if (!evt.target.closest(".form-section")) {
+		document.getElementById('overlay').style.display = "none"
+	}
+	else if (evt.target.id === 'pay-btn') {
+		handlePayBtn(evt)
+	}
+	if (localStorage.hasOwnProperty('order')) {
+		renderBasket()
+		updateOrderQuantity()
+	}
 })
 
 renderMenu()
 if (localStorage.hasOwnProperty('order')) {
 	renderBasket()
+	updateOrderQuantity()
 }

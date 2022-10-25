@@ -5,6 +5,11 @@ body {
 	box-sizing: border-box;
 	font-family: 'Smythe', cursive;
 	font-size: 1rem;
+	height: 100vh;
+}
+
+.overflow-disable {
+	overflow: hidden;
 }
 
 main {
@@ -145,4 +150,73 @@ i {
 	border-radius: 5px;
 	color: #FFF;
 	cursor: pointer;
+}
+
+/* FORM */
+
+.form-section {
+	background-color: #FFF;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 350px;
+	width: 400px;
+	box-shadow: 0 0 50px 10px #8B8B8B;
+	/* display: none; */
+}
+
+.form-section p {
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 70%;
+}
+
+input,
+.btn {
+	box-sizing: border-box;
+	width: 85%;
+	font-size: 1rem;
+	padding: .8em;
+	border: 1px solid #D2D2D2;
+	border-radius: 5px;
+}
+
+.btn {
+	background-color: #16DB99;
+	color: #FFF;
+	border: none;
+	cursor: pointer;
+	margin-top: 1.5em;
+}
+
+.overlay {
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: none;
+}
+
+.confirmation-message {
+	font-size: 1.5rem;
+	text-align: center;
+	background-color: #16DB99;
+	padding: 1em;
+	border-radius: 5px;
+	display: none;
 }

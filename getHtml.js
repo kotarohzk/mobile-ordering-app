@@ -12,7 +12,7 @@ function getMenuHtml() {
 			</div>
 			<div class="icon-group">
 				<i class="fa-solid fa-minus" data-decrease="${menuItem.id}"></i>
-				<p id="quantity-${menuItem.id}">0</p>
+				<p id="quantity-${menuItem.id}" class="quantity">0</p>
 				<i class="fa-solid fa-plus" data-foodid="${menuItem.id}"></i>
 			</div>
 		</div>

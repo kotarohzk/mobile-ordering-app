@@ -10,22 +10,34 @@
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
-	<body>
-		<main>
+	<body id="body">
+		<main id="main">
 			<div class="banner">
 				<h1>Jimmy's Diner</h1>
 				<p>The best burgers and pizzas in town.</p>
 			</div>
 			<div id="menu" class="menu"></div>
+			<div class="confirmation-message" id="confirmation-message"></div>
 			<div id="basket" class="basket">
 				<p>Your order</p>
 				<div id="basket-item-container" class="basket-item-container">
 				</div>
 				<div id="price" class="price">
 				</div>
-				<button class="order-btn">Complete order</button>
+				<button id="order-btn" class="order-btn">Complete order</button>
 			</div>
 			<script src="index.js" type="module"></script>
 		</main>
+		<div id="overlay" class="overlay">
+			<div id="form-section" class="form-section">
+				<p>Enter card details</p>
+				<form id="form" action="#">
+					<input type="text" name="name" id="name" placeholder="Enter your name" required>
+					<input type="tel" name="card" id="card" placeholder="Enter card number" required>
+					<input type="tel" name="cvv" id="cvv" placeholder="Enter CVV" required>
+					<button type="submit" id="pay-btn" class="btn">Pay</button>
+				</form>	
+			</div>
+		</div>
 	</body>
 </html>
